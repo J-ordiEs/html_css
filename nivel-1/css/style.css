@@ -109,6 +109,16 @@ main {
 
 aside {
     grid-column: 3/3;
+    background-color: black;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+aside ul {
+    background-color: var(--color1);
+    height: 100%;
+    margin: auto;
+    padding: 1rem;
 }
 
 footer {
