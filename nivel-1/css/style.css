@@ -110,8 +110,8 @@ main {
 aside {
     grid-column: 3/3;
     background-color: black;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 1rem 1rem 0;
 }
 
 aside ul {
@@ -123,4 +123,12 @@ aside ul {
 
 footer {
     grid-column: 1/4;
+    background-color: black;
+}
+
+footer .pie {
+    background-color: var(--color7);
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 97%;
 }
