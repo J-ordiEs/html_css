@@ -7,15 +7,19 @@
     color: black;
 }
 
-.layout {    
+.layout {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    height: 100%;
 }
 
-header, main, aside, footer {
-    
+header,
+main,
+aside,
+footer {
+    flex: 1 1 50px;
     margin: 0 0 1rem 0;
     padding: 1rem;
     background-color: black;
@@ -32,13 +36,15 @@ header, main, aside, footer {
     width: 100%;
 }
 
-.logo , .nav .list-nav , .social{
+.logo,
+.nav .list-nav,
+.social {
     padding: 1rem;
     margin: 1rem;
     background-color: #EA5455;
 }
 
-.list-nav {    
+.list-nav {
     padding: 1rem;
     display: flex;
     justify-content: space-around;
@@ -55,53 +61,124 @@ header, main, aside, footer {
     background-color: #FED700;
 }
 
-.container{
+.container {
     display: flex;
     flex-flow: row wrap;
-    height: 40%;
 }
 
 .contenido {
     flex-grow: 2;
-    max-width: 80%;
 }
 
-.section, .navegacion {
+.section,
+.navegacion {
     background-color: #4f4f6b;
 }
 
-.articles {    
+.articles {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;    
+    justify-content: space-around;
 }
 
-.articles article{
-    width: 250px;
+.articles article {
+    width: 35%;
     padding: 1rem;
-    margin:  1rem;    
-    background-color:  #206db0;
-    
+    margin: 1rem;
+    background-color: #206db0;
+
+}
+
+.navegacion {
+    padding: 1rem;
 }
 
 .navegacion p {
-    background-color:  #72a3c4;
+    background-color: #72a3c4;
+    padding: 1rem;
 }
 
 aside {
     flex-grow: 1;
+    padding-left: 0;
 }
 
 aside ul {
     background-color: #f54052;
-    height: 100%;
     padding: 1rem;
 }
 
 .publicidad {
     background-color: #ffd900;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+footer {
+    height: 100px;
+    display: flex;
 }
 
 .pie {
     background-color: #f0e78b;
+    padding: 1em;
+    width: 100%;
+    align-self: center;
+}
+
+/*
+    screen mobile
+*/
+
+@media (max-width: 480px) {
+
+
+    .logo,
+    .social {
+        width: 90%;
+    }
+
+    .container-nav {
+        flex-direction: column;
+    }
+
+    .list-nav {
+        flex-direction: column;
+    }
+
+
+    .container {
+        flex-direction: column;
+    }
+
+    .contenido {
+        flex: 3;
+    }
+
+    .articles article {
+        width: 100%;
+    }
+
+    aside {
+        padding-left: 1rem;
+    }
+
+}
+
+/* screen tablet */
+
+@media (min-width: 481px) and (max-width: 767px){
+
+    .container {
+        flex-direction: column;
+    }
+
+    .articles article {
+        width: 30%;
+    }
+
+    aside {
+        padding-left: 1rem;
+    }
+
 }
